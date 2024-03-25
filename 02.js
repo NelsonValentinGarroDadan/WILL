@@ -12,6 +12,12 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
+  let ordenado = strings.toSorted((a,b)=>{
+    if(a.length > b.length) return -1;
+    if(a.length < b.length) return 1;
+    return 0;
+  })
+  return ordenado[0];
 }
 
 // No modifiques nada debajo de esta linea //
